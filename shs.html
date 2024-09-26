@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SHS</title>
+
+
+        <link rel="icon" type="image" href="content/shs.png">
+        <link rel="stylesheet" href="styles/shstyle.css">
+
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta property="og:title" content="Information For SHS." />
+        <meta property="og:description" content="What day is it? Whats The Bulldog time? Find out here with live class schedules!" />
+        <meta property="og:type" content="website"/>
+        <meta name="theme-color" content="FFFFFF">
+        <meta property="og:image" content="https://i.imgur.com/YCQXPXf.png"> 
+        <!--Meta Tags-->
+
+    </head>
+
+    <body>
+        <header>
+            <div class="headercontainer">
+                <h1 class="welcome">Welcome Bulldogs!</h1>
+            </div>
+
+            <div class="infobox">
+                <div class="clockcontain">
+                    <h1 class="clock">Placehold</h1>
+                </div>
+                <h1 class="header">Your Day<br> <span class="start"></span></h1>
+                <h1 class="header"><span class="dayover"></span></h1>
+                <div class="credit">
+                    <h1 class="txt">Developed By <br> Jacob Young</h1>
+                </div>
+                <div class="code">
+                    <img class="qr" alt="QR Code" src="content/qr.png">
+                    <h3 class="qrtxt">Scan For All Info On Your Phone!</h3>
+                </div>
+                <ul>
+                    <li class="sdwknd">Current Day - <span class="day"></span></li>
+                    <li>Bulldog Time - <span class="bt"></span></li>
+                    <li>Period - <span class="period"></span></li>
+                    <li>Time Left - <span class="time"></span></li>
+                </ul>
+            </div>
+        </header>
+        <script src="js/daysel.js"></script>
+        <script src="js/periodpre.js"></script>
+        <script src="js/bt.js"></script>
+        <script src="js/moment.js"></script>
+        <script src="js/time.js"></script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Outage Time Tracker For Teachers & Staff @ Sandpoint Highschool." />
+    <meta property="og:description" content="Need to know whos out, and when? What about how many? Use this tool to fill all those needs!" />
+    <title>Outage Time Tracker</title>
+    <link rel="stylesheet" href="styles/timestyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/serv.js" defer></script>
+</head>
+<body>
+    <div id="spinner" style="display: none;"></div>
+    <div id="overlay"></div>
+    <header>
+        <div class="header-content">
+            <h1>Hello! Please login below.</h1>
+        </div>
+    </header>
+    <main>
+        <div id="loginContainer">
+            <input type="text" id="teacherName" class="log" placeholder="Please Enter Teacher Name">
+            <input type="text" id="periodNumber" class="log" placeholder="Enter Period (e.g., 1A, 2B)">
+            <button id="submitInfoButton">Login</button>
+        </div>
+        
+        <div id ='mainProgram' class="main-content" style="display:none">
+          <section class="input-area">
+            <div class="input-container">
+                <input type="text" id="studentName" placeholder="Please Enter Your Name" onkeydown="handleKeyDown(event)">
+            </div>
+            <div class="button-container">
+                <button id="checkOutButton" onclick="checkOut()">Check Out</button>
+            </div>
+          </section>
+            <section class="time-log">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Duration</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="log"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+          <div id="loadingIndicator" style="display: none;" >Sending data...</div>
+          <button id="sendDataButton" style="display: none;">Submit Data</button>
+          <div class="statistics" style="display: none;" id="stats">
+              <p id="currentStudentsOut">Current Students Out: 0</p>
+              <p id="totalStudentsCheckedOut">Total Check Outs: 0</p>
+          </div>
+          
+            <hr>
+            <b><p>Software Solutions Provided By Jacob Young ©</p></b>
+            <em><p class="lic">Licensed for Sandpoint Highschool, LPOSD #84</p></em>
+        </div>
+      </footer>
+</body>
+</html>
